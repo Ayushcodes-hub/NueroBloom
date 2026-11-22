@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --nb-bg: #FAFAF7;
+    --nb-surface: #FFFFFF;
+    --nb-surface-subtle: #F4F2EC;
+    --nb-border: #E5E2DC;
+    --nb-text: #25243A;
+    --nb-text-muted: #5A5870;
+    --nb-primary: #6D4AFF;
+    --nb-primary-soft: #EDE9FE;
+    --nb-lavender: #A78BFA;
+    --nb-mint: #A7F3D0;
+    --nb-mint-deep: #047857;
+    --nb-yellow: #FDE68A;
+    --nb-yellow-deep: #92400E;
+    --nb-font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --nb-font-body: 'DM Sans', system-ui, sans-serif;
+    --nb-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html {
+    font-family: var(--nb-font-body);
+    background-color: var(--nb-bg);
+    color: var(--nb-text);
+    scroll-behavior: smooth;
+  }
+
+  html[data-text-size="large"] {
+    font-size: 18px;
+  }
+
+  html[data-text-size="xlarge"] {
+    font-size: 20px;
+  }
+
+  html[data-dyslexic-font="true"],
+  html[data-dyslexic-font="true"] * {
+    font-family: 'OpenDyslexicRegular', 'OpenDyslexic', 'Atkinson Hyperlegible', 'Verdana', sans-serif !important;
+    letter-spacing: 0.03em;
+    word-spacing: 0.08em;
+    line-height: 1.7;
+  }
+
+  html[data-high-contrast="true"] {
+    --nb-bg: #FFFFFF;
+    --nb-surface: #FFFFFF;
+    --nb-surface-subtle: #F3F4F6;
+    --nb-border: #111827;
+    --nb-text: #000000;
+    --nb-text-muted: #1F2937;
+    --nb-primary: #3719CA;
+    --nb-primary-soft: #E0E7FF;
+  }
+
+  html[data-reduced-motion="true"] *,
+  html[data-reduced-motion="true"] *::before,
+  html[data-reduced-motion="true"] *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html[data-keyboard-focus="true"] *:focus-visible {
+    outline: 3px solid #3719CA !important;
+    outline-offset: 3px !important;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--nb-font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--nb-font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+*:focus-visible {
+  outline: 2px solid #6D4AFF;
+  outline-offset: 2px;
+}

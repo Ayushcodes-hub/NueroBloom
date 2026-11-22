@@ -1,0 +1,6 @@
+{
+  "name": "NeuroBloom — Inclusive Cognitive Therapy Through Play",
+  "description": "An inclusive, adaptive digital classroom and play-based cognitive skill development platform for neurodiverse children, connecting children, parents, and special educators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
